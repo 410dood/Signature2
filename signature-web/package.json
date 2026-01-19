@@ -9,9 +9,9 @@
   },
   "license": "Apache-2.0",
   "mxpackage": {
-    "name": "Signature",
+    "name": "SignatureReactCompatible",
     "type": "widget",
-    "mpkName": "Signature.mpk"
+    "mpkName": "SignatureReactCompatible.mpk"
   },
   "config": {
     "projectPath": "C:\\\\Users\\\\wdood\\\\Mendix\\\\Olari-main",
