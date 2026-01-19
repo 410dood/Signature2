@@ -1,0 +1,53 @@
+import { shallow, ShallowWrapper } from "enzyme";
+import { createElement } from "react";
+
+import { Signature, SignatureProps } from "../Signature";
+import "jest-canvas-mock";
+
+describe("Signature", () => {
+    const renderCanvas = (props: SignatureProps): ShallowWrapper<SignatureProps, any> =>
+        shallow(createElement(Signature, props));
+
+    const defaultProps: SignatureProps = {
+        heightUnit: "percentageOfWidth",
+        height: 50,
+        widthUnit: "percentage",
+        width: 100,
+        className: "custom-class",
+        gridCellWidth: 50,
+        gridCellHeight: 50,
+        gridBorderColor: "#777",
+        gridBorderWidth: 1,
+        penType: "fountain",
+        penColor: "#000",
+        showGrid: true,
+        alertMessage: "",
+        readOnly: false,
+        signatureMode: "draw",
+        showModeToggle: false,
+        typeFontFamily: "cursive",
+        typeFontSize: 32,
+        typePlaceholder: "Type your name",
+        clearSignature: false,
+        wrapperStyle: {}
+    };
+
+    it("renders the structure correctly", () => {
+        const canvas = renderCanvas(defaultProps);
+
+        expect(canvas).toMatchSnapshot();
+    });
+
+    it("renders the signature pad with options", () => {
+        const canvas = renderCanvas(defaultProps);
+        canvas.setProps({
+            clearSignature: true,
+            readOnly: true
+        });
+        const canvasInstance: any = canvas.instance();
+        canvasInstance.canvasNode = document.createElement("canvas");
+        const signaturePadOptions = jest.spyOn(canvasInstance, "signaturePadOptions");
+        canvasInstance.componentDidMount();
+        expect(signaturePadOptions).toHaveBeenCalled();
+    });
+});

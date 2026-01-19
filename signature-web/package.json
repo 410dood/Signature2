@@ -1,0 +1,48 @@
+{
+  "name": "signature",
+  "widgetName": "Signature",
+  "version": "1.0.7",
+  "description": "React compatible version of signature widget.",
+  "author": "Olari",
+  "engines": {
+    "node": ">=16"
+  },
+  "license": "Apache-2.0",
+  "mxpackage": {
+    "name": "Signature",
+    "type": "widget",
+    "mpkName": "Signature.mpk"
+  },
+  "config": {
+    "projectPath": "C:\\\\Users\\\\wdood\\\\Mendix\\\\Olari-main",
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": 3000
+  },
+  "packagePath": "com.olari.widget.custom",
+  "scripts": {
+    "start": "pluggable-widgets-tools start:server",
+    "dev": "pluggable-widgets-tools start:web",
+    "build": "pluggable-widgets-tools build:web",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "release": "pluggable-widgets-tools release:web"
+  },
+  "dependencies": {
+    "classnames": "^2.5.1",
+    "react-resize-detector": "^9.1.1",
+    "signature_pad": "4.0.0"
+  },
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^11.3.0"
+  },
+  "resolutions": {
+    "react": "^18.2.0",
+    "@types/react": "^18.2.0",
+    "react-native": "0.72.7"
+  },
+  "overrides": {
+    "react": "^18.2.0",
+    "@types/react": "^18.2.0",
+    "react-native": "0.72.7"
+  }
+}
