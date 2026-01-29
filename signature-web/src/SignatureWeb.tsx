@@ -3,7 +3,7 @@ import { createElement, ReactElement } from "react";
 import { SignatureContainer } from "./components/SignatureContainer";
 import { SignatureContainerProps } from "../typings/SignatureProps";
 
-export function Signature(props: SignatureContainerProps): ReactElement {
+export function SignatureWeb(props: SignatureContainerProps): ReactElement {
     const propsAny = props as SignatureContainerProps & {
         readOnly?: boolean;
         editable?: boolean;

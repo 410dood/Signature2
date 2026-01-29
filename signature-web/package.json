@@ -1,7 +1,7 @@
 {
-  "name": "signature",
-  "widgetName": "Signature",
-  "version": "1.0.9",
+  "name": "signature-web",
+  "widgetName": "SignatureWeb",
+  "version": "1.1.0",
   "description": "React compatible version of signature widget.",
   "author": "Olari",
   "engines": {
@@ -13,16 +13,16 @@
     "url": "https://github.com/410dood/Signature2.git"
   },
   "mxpackage": {
-    "name": "SignatureReactCompatible",
+    "name": "SignatureWeb",
     "type": "widget",
-    "mpkName": "SignatureReactCompatible.mpk"
+    "mpkName": "SignatureWeb.mpk"
   },
   "config": {
     "projectPath": "C:\\\\Users\\\\wdood\\\\Mendix\\\\Olari-main",
     "mendixHost": "http://localhost:8080",
     "developmentPort": 3000
   },
-  "packagePath": "com.olari.widget.custom",
+  "packagePath": "com.olari.widget.web",
   "scripts": {
     "start": "pluggable-widgets-tools start:server",
     "dev": "pluggable-widgets-tools start:web",
