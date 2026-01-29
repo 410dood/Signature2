@@ -1,13 +1,17 @@
 {
   "name": "signature",
   "widgetName": "Signature",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "React compatible version of signature widget.",
   "author": "Olari",
   "engines": {
     "node": ">=16"
   },
   "license": "Apache-2.0",
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/410dood/Signature2.git"
+  },
   "mxpackage": {
     "name": "SignatureReactCompatible",
     "type": "widget",
